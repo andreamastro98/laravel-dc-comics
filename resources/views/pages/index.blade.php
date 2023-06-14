@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('titlePage')
-Laravel comincs | Home
+Laravel comics | Home
 @endSection
 
 @section('content')
@@ -11,7 +11,7 @@ Laravel comincs | Home
     @foreach($comics as $elem)
     <div class="card">
         <img src="{{$elem['thumb']}}" alt="">
-        <a href="">
+        <a href="{{ route ('show', $elem -> id)}}">
             <span>{{ $elem['series'] }}</span>
         </a>        
     </div>
