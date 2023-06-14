@@ -11,7 +11,7 @@ Laravel comics | Home
     @foreach($comics as $elem)
     <div class="card">
         <img src="{{$elem['thumb']}}" alt="">
-        <a href="{{ route ('show', $elem -> id)}}">
+        <a href="{{ route ('comics.show', $elem -> id)}}">
             <span>{{ $elem['series'] }}</span>
         </a>        
     </div>
@@ -19,7 +19,9 @@ Laravel comics | Home
 
 </div>
 <div class="d-flex justify-content-center pb-5">
-    <button>load more</button>
+    <a href="{{ route('comics.create') }}">
+        <button>add one</button>
+    </a>    
 </div>
 
 @include ('partials.fastLink')

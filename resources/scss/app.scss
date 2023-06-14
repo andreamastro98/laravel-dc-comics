@@ -159,3 +159,47 @@ button {
     padding: 0.5rem 2rem 0.5rem 2rem;
     border: 0;
 }
+
+#single-comic{
+    background-color: white;
+    img{
+        width: 100%;
+    }
+    h1{
+        text-transform: uppercase;
+    }
+    #available{
+        background-color: #198754;
+        padding: 0.5rem;
+        color: white;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+        
+    }
+    p{
+            font-size: 1.1rem;
+        }
+}
+
+#specs{
+    background-color: #F6F6F6;
+    .row{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        .row{
+            border-bottom: 1px solid grey;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            .col-4{
+                span{
+                    font-weight: bold;
+                }
+            }
+            
+        }        
+    }
+}
+
+#form-section{
+    background-color: white;
+}
