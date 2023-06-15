@@ -140,24 +140,20 @@ main {
         height: 73%;
         &:hover{
             filter: brightness(50%);
-
-            .i,.first-icon,.second-icon{
-                display:block;
-            }
         }
     }
 
-    i,.first-icon{
+    .first-icon{
         font-size: 1.2rem;
         position: absolute;
         top: 0.5rem;
         right: 2rem;
     }
 
-    i,.second-icon {
+    .second-icon {
         font-size: 1.2rem;
         position: absolute;
-        top: 0.5rem;
+        top: 0.2rem;
         right: 0.5rem;
     }
 
@@ -170,6 +166,11 @@ main {
         text-transform: uppercase;
         color: white;
         }
+    }
+
+    button{
+        background-color: rgba(0, 0, 0, 0);
+        padding: 0;
     }
     
 }

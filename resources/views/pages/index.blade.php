@@ -11,12 +11,17 @@ Laravel comics | Home
     @foreach($comics as $elem)
     <div class="card position-relative">
         <img src="{{$elem['thumb']}}" alt="">
-        <a href="">
+        <a href="{{ route( 'comics.edit', $elem ) }}">
             <i class="fa-solid fa-pen first-icon" style="color: #ffffff;"></i>
         </a>
-        <a href="">
-            <i class="fa-solid fa-trash second-icon" style="color: #ffffff;"></i>
-        </a>
+        
+        <form action=" {{ route('comics.destroy', $elem) }} " method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="second-icon" type="submit"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
+        </form>
+        
+        
         
         <a href="{{ route ('comics.show', $elem -> id)}}">
             <span>{{ $elem['series'] }}</span>
