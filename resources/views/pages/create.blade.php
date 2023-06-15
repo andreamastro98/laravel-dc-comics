@@ -37,7 +37,7 @@ Laravel comics | Create One Comic
 
             <div class="form-group mb-3">
                 <label for="comic-series" class="form-label">Series</label>
-                <input class="form-control" type="text" id="comic-series" class="form-control" name="Series">
+                <input class="form-control" type="text" id="comic-series" class="form-control" name="series">
             </div>
 
             <div class="form-group mb-3">
