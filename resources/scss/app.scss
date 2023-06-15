@@ -138,7 +138,30 @@ main {
         width: 100%;
         margin-bottom: 1rem;
         height: 73%;
+        &:hover{
+            filter: brightness(50%);
+
+            .i,.first-icon,.second-icon{
+                display:block;
+            }
+        }
     }
+
+    i,.first-icon{
+        font-size: 1.2rem;
+        position: absolute;
+        top: 0.5rem;
+        right: 2rem;
+    }
+
+    i,.second-icon {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    
 
     a{
         text-decoration: none;

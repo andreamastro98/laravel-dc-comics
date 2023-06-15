@@ -23,8 +23,6 @@ Laravel comics | Create One Comic
                 <textarea class="form-control" name="description" id="comic-description" cols="30" rows="10"></textarea>
             </div>
 
-
-
             <div class="form-group mb-3">
                 <label for="comic-thumb" class="form-label">Thumb Image</label>
                 <input type="text" id="comic-thumb" name="thumb"  class="form-control">
