@@ -37,6 +37,17 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'title' => 'required',
+                'price' => 'required',
+            ],
+            [
+                'title.required' => 'Il campo Title é richiesto',
+                'price.required' => 'Il campo Price é richiesto'
+            ]
+        );
+
         $form_data = $request->all();
 
         $newComic = new Comic();
@@ -80,6 +91,17 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate(
+            [
+                'title' => 'required',
+                'price' => 'required',
+            ],
+            [
+                'title.required' => 'Il campo Title é richiesto',
+                'price.required' => 'Il campo Price é richiesto'
+            ]
+        );
+        
         $form_data = $request->all();
         $comic->update($form_data);
 

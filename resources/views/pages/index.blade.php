@@ -18,7 +18,7 @@ Laravel comics | Home
         <form action=" {{ route('comics.destroy', $elem) }} " method="POST">
             @csrf
             @method('DELETE')
-            <button class="second-icon" type="submit"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
+            <button onclick="return cancellaElem()" class="second-icon" type="submit"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
         </form>
         
         
@@ -39,3 +39,9 @@ Laravel comics | Home
 @include ('partials.fastLink')
 
 @endSection
+
+<script>
+    function cancellaElem(){
+        return confirm('Sei sicuro di voler cancellare il fumetto?')
+    }
+</script>

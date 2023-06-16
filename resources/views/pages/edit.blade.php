@@ -16,7 +16,10 @@ Laravel comics | Edit One Comic
 
             <div class="form-group mb-3">
                 <label for="comic-title" class="form-label">Title</label>
-                <input type="text" id="comic-title" name="title" class="form-control" placeholder="Inserisci title" value="{{ old('title') ?? $comic->title }}">
+                <input type="text" id="comic-title" name="title" class="form-control @error('title') is-invalid @enderror" placeholder="Inserisci title" value="{{ old('title') ?? $comic->title }}">
+                @error('title')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group mb-3">
@@ -31,7 +34,10 @@ Laravel comics | Edit One Comic
 
             <div class="form-group mb-3">
                 <label for="comic-price" class="form-label">Price</label>
-                <input type="text" id="comic-price" name="price"  class="form-control" value="{{ old('price') ?? $comic->price }}">
+                <input type="text" id="comic-price" name="price"  class="form-control @error('price') is-invalid @enderror" value="{{ old('price') ?? $comic->price }}">
+                @error('price')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group mb-3">

@@ -59,7 +59,7 @@ $menuLinks = array(
     <header class="container">
         <nav class="d-flex justify-content-between align-items-center">
             <div>
-                <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="" style="width: 70%;">
+                <a href="{{ route('comics.index')}}"><img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="" style="width: 70%;"></a>                
             </div>
             <div>
                 <ul>
